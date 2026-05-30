@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Star, ShoppingBag, Heart } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
+import { formatPrice } from '../utils/format';
 
 interface ProductCardProps {
   product: Product;
@@ -18,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} className="group">
+    <Link to={`/product/formatPrice{product.id}`} className="group">
       <div className="card relative">
         {product.bestseller && (
           <span className="absolute top-3 left-3 bg-secondary-500 text-white text-xs font-semibold px-2 py-1 rounded z-10">
@@ -56,7 +57,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`w-4 h-4 ${
+                  className={`w-4 h-4 formatPrice{
                     i < Math.floor(product.rating)
                       ? 'text-yellow-400 fill-current'
                       : 'text-gray-300'
@@ -71,10 +72,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-primary-500">${product.price.toFixed(2)}</span>
+              <span className="text-xl font-bold text-primary-500">formatPrice{product.price.toFixed(2)}</span>
               {product.originalPrice && (
                 <span className="text-sm text-gray-400 line-through">
-                  ${product.originalPrice.toFixed(2)}
+                  formatPrice{product.originalPrice.toFixed(2)}
                 </span>
               )}
             </div>
