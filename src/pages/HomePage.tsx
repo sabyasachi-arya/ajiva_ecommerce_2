@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-medium">
                 <Sparkles className="w-4 h-4" />
-                <span>New Collection 2024</span>
+                <span>New Collection 2026</span>
               </div>
 
               <h1 className="font-display text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
