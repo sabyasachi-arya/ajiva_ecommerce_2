@@ -25,7 +25,7 @@ export const products: Product[] = [
     name: 'Lavender Dreams Perfume',
     category: 'perfume',
     price: 89.99,
-    image: 'https://images.pexels.com/photos/965819/pexels-photo-965819.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/perfume-1.png',
     images: [
       'https://images.pexels.com/photos/965819/pexels-photo-965819.jpeg?auto=compress&cs=tinysrgb&w=800',
     ],
